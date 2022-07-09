@@ -148,7 +148,7 @@ void initLINFlexD_0 ( unsigned int MegaHertz, unsigned int BaudRate ) {
 
 //char message[] = "Welcome to MPC5748G! ";
 
-char message_0[] = {"Hello"};
+char message_0[] = {"Hello World\r\n"};
 
 void testLINFlexD_0( void )  {     /* Display message to terminal */
   int i, size, j;
@@ -158,9 +158,9 @@ void testLINFlexD_0( void )  {     /* Display message to terminal */
   /* Send to LINFlex_1. */
   for (i = 0; i < size; i++) {
     txLINFlexD_0(message_0[i]); //Send from LINFlex_0
-    result[i] = rxLINFlexD_1(); //Get the character from LINFlex_0
+//    result[i] = rxLINFlexD_1(); //Get the character from LINFlex_0
 
-    if(result[i] == message_0[i]){ //Flash PA0 5 times if result is the same as the sent character
+//    if(result[i] == message_0[i]){ //Flash PA0 5 times if result is the same as the sent character
     	SIUL2.GPDO[PA0].B.PDO = 0;
     	for(j = 0; j < 5; j++){
     		int counter = 0;
@@ -170,7 +170,7 @@ void testLINFlexD_0( void )  {     /* Display message to terminal */
     		}
     		counter=0;
     	}
-    }
+//    }
   }
 }
 /*****************************************************************************/

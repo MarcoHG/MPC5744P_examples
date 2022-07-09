@@ -77,10 +77,11 @@ int main(void)
 	system160mhz();            /* sysclk=160MHz, dividers configured, mode trans*/
 
 	initGPIO();
-
-	initLINFlexD_1(80,19200);
-
-	testLINFlexD_1();            /* Send test message to PC terminal.*/
+		//  initLINFlexD_1(80,19200);
+	//  testLINFlexD_1();            /* Send test message to PC terminal.*/
+	  initLINFlexD_0(80,19200);
+	  for(int a=0; a< 1000; ++a); // wait for TX line (may send garbage)
+	  testLINFlexD_0();            /* Send test message to PC terminal.*/
 
 	for(;;); //Loop forever
 
@@ -99,4 +100,5 @@ void peri_clock_gating (void) {
   MC_ME.RUN_PC[1].R = 0x000000FE;  /* config. peri clock for all RUN modes */
 
   MC_ME.PCTL91.B.RUN_CFG = 0x1; //LINFlexD_1: Select peripheral config RUN_PC[1]. No LINFlex_D_2 on Panther
+  MC_ME.PCTL204.B.RUN_CFG = 0x1; //LINFlexD_0: Select peripheral config RUN_PC[1]. No LINFlex_D_2 on Panther
 }

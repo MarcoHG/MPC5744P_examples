@@ -4,8 +4,8 @@
 <intAttribute key="com.pemicro.debug.gdbjtag.ppc.NUMBER_ELVES" value="0"/>
 <stringAttribute key="com.pemicro.debug.gdbjtag.ppc.PE.DEVICE_NAME" value="MPC5744P"/>
 <stringAttribute key="com.pemicro.debug.gdbjtag.ppc.PE.GDB_OPTIONS" value=""/>
-<intAttribute key="com.pemicro.debug.gdbjtag.ppc.PE.HARDWARE_INTERFACE" value="6"/>
-<stringAttribute key="com.pemicro.debug.gdbjtag.ppc.PE.LAST_ATTRIBUTE_HEADER" value="com.pemicro.debug.gdbjtag.ppc.sda."/>
+<intAttribute key="com.pemicro.debug.gdbjtag.ppc.PE.HARDWARE_INTERFACE" value="0"/>
+<stringAttribute key="com.pemicro.debug.gdbjtag.ppc.PE.LAST_ATTRIBUTE_HEADER" value="com.pemicro.debug.gdbjtag.ppc.ml."/>
 <booleanAttribute key="com.pemicro.debug.gdbjtag.ppc.PE.USE_EXTERNAL_SERVER" value="true"/>
 <intAttribute key="com.pemicro.debug.gdbjtag.ppc.algorithmIndex" value="0"/>
 <stringAttribute key="com.pemicro.debug.gdbjtag.ppc.alternativeAlgorithmPath" value=""/>
@@ -65,7 +65,7 @@
 <booleanAttribute key="com.pemicro.debug.gdbjtag.ppc.macScriptEnable" value="false"/>
 <stringAttribute key="com.pemicro.debug.gdbjtag.ppc.ml.CYCLONE_IP" value=""/>
 <booleanAttribute key="com.pemicro.debug.gdbjtag.ppc.ml.DO_RESET_DELAY" value="false"/>
-<intAttribute key="com.pemicro.debug.gdbjtag.ppc.ml.INTERFACE_PORT" value="-1"/>
+<intAttribute key="com.pemicro.debug.gdbjtag.ppc.ml.INTERFACE_PORT" value="0"/>
 <stringAttribute key="com.pemicro.debug.gdbjtag.ppc.ml.INTERFACE_PORT_STRING" value="USB1"/>
 <stringAttribute key="com.pemicro.debug.gdbjtag.ppc.ml.NETWORK_CARD_IP" value=""/>
 <stringAttribute key="com.pemicro.debug.gdbjtag.ppc.ml.POWER_DOWN_DELAY" value="250"/>
@@ -169,6 +169,6 @@
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList context=&quot;reserved-for-future-use&quot;/&gt;&#13;&#10;"/>
+<stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;memoryBlockExpressionList context=&quot;reserved-for-future-use&quot;/&gt;&#10;"/>
 <stringAttribute key="process_factory_id" value="org.eclipse.cdt.dsf.gdb.GdbProcessFactory"/>
 </launchConfiguration>

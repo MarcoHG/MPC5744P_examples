@@ -6,9 +6,7 @@
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.MwErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="com.freescale.s32ds.cdt.core.errorParsers.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.MPWErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.MwfeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -17,8 +15,9 @@
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.LnkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.CobjErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.s32ds.cdt.core.errorParsers.S32DSGNULinkerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -26,7 +25,7 @@
 					<folderInfo id="com.freescale.s32ds.cross.gnu.e200.exe.debug.665915528." name="/" resourcePath="">
 						<toolChain id="com.freescale.s32ds.cross.gnu.e200.toolChain.debug.261653348" name="Standard S32DS toolchain for E200" superClass="com.freescale.s32ds.cross.gnu.e200.toolChain.debug">
 							<option id="com.freescale.s32ds.cross.gnu.e200.option.target.family.1081448467" name="Target processor" superClass="com.freescale.s32ds.cross.gnu.e200.option.target.family" value="com.freescale.s32ds.cross.gnu.e200.option.target.family.e200z4" valueType="enumerated"/>
-							<option id="com.freescale.s32ds.cross.gnu.e200.option.target.sysroot.1181000577" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.option.target.sysroot" value="--sysroot=&quot;${eclipse_home}../S32DS/e200_ewl2&quot;" valueType="string"/>
+							<option id="com.freescale.s32ds.cross.gnu.e200.option.target.sysroot.1181000577" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.option.target.sysroot" value="--sysroot=&quot;${VLE_EWL_DIR}&quot;" valueType="string"/>
 							<option id="com.freescale.s32ds.cross.gnu.e200.option.target.libraries.1873928203" name="Libraries support" superClass="com.freescale.s32ds.cross.gnu.e200.option.target.libraries" value="com.freescale.s32ds.cross.gnu.e200.option.target.libraries.ewl_c9x_c" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.972067443" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
 							<builder buildPath="${workspace_loc:/LINFlexD_UART_MPC5744P}/Debug" id="com.freescale.s32ds.cross.gnu.builder.1052150988" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="FSL Make Builder" superClass="com.freescale.s32ds.cross.gnu.builder"/>
@@ -42,14 +41,14 @@
 									<listOptionValue builtIn="false" value="MPC574xP"/>
 								</option>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.family.1959202547" name="Target Processor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.family" useByScannerDiscovery="false" value="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.family.e200z4" valueType="enumerated"/>
-								<option id="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.sysroot.2034133563" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.sysroot" useByScannerDiscovery="false" value="--sysroot=&quot;${eclipse_home}../S32DS/e200_ewl2&quot;" valueType="string"/>
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.sysroot.2034133563" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.sysroot" useByScannerDiscovery="false" value="--sysroot=&quot;${VLE_EWL_DIR}&quot;" valueType="string"/>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.libraries.813467706" superClass="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.libraries" useByScannerDiscovery="false" value="com.freescale.s32ds.cross.gnu.e200.tool.c.compiler.option.target.libraries.ewl_c9x_c" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.2089099418" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;../include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${eclipse_home}../S32DS/e200_ewl2/EWL_C/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${eclipse_home}../S32DS/e200_ewl2/EWL_C/include/pa&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${eclipse_home}../S32DS/build_tools/e200_ewl2/EWL_C/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${eclipse_home}../S32DS/build_tools/e200_ewl2/EWL_C/include/pa&quot;"/>
 								</option>
-								<option id="gnu.c.compiler.option.dialect.std.1848454402" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.std.1848454402" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.c99" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.6003659" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.2015702598" name="Standard S32DS C++ Compiler" superClass="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler">
@@ -64,7 +63,7 @@
 									<listOptionValue builtIn="false" value="MPC574xP"/>
 								</option>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.family.595274059" name="Target Processor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.family" useByScannerDiscovery="false" value="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.family.e200z4" valueType="enumerated"/>
-								<option id="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.sysroot.242275303" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.sysroot" useByScannerDiscovery="false" value="--sysroot=&quot;${eclipse_home}../S32DS/e200_ewl2&quot;" valueType="string"/>
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.sysroot.242275303" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.sysroot" useByScannerDiscovery="false" value="--sysroot=&quot;${VLE_EWL_DIR}&quot;" valueType="string"/>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.libraries.966358011" superClass="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.libraries" useByScannerDiscovery="false" value="com.freescale.s32ds.cross.gnu.e200.tool.cpp.compiler.option.target.libraries.ewl_c9x_c" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1274068153" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../include&quot;"/>
@@ -79,7 +78,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Project_Settings/Linker_Files/libs.ld&quot;"/>
 								</option>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.family.1883467379" name="Target Processor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.family" value="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.family.e200z4" valueType="enumerated"/>
-								<option id="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.sysroot.1341225143" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.sysroot" value="--sysroot=&quot;${eclipse_home}../S32DS/e200_ewl2&quot;" valueType="string"/>
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.sysroot.1341225143" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.sysroot" useByScannerDiscovery="false" value="--sysroot=&quot;${VLE_EWL_DIR}&quot;" valueType="string"/>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.libraries.806572657" superClass="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.libraries" value="com.freescale.s32ds.cross.gnu.e200.tool.c.linker.option.target.libraries.ewl_c9x_c" valueType="enumerated"/>
 								<inputType id="com.freescale.s32ds.cross.gnu.tool.c.linker.inputType.scriptfile.1118645675" superClass="com.freescale.s32ds.cross.gnu.tool.c.linker.inputType.scriptfile"/>
 							</tool>
@@ -90,7 +89,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Project_Settings/Linker_Files/libs.ld&quot;"/>
 								</option>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.family.1332033446" name="Target Processor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.family" value="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.family.e200z4" valueType="enumerated"/>
-								<option id="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.sysroot.953624782" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.sysroot" value="--sysroot=&quot;${eclipse_home}../S32DS/e200_ewl2&quot;" valueType="string"/>
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.sysroot.953624782" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.sysroot" value="--sysroot=&quot;${VLE_EWL_DIR}&quot;" valueType="string"/>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.libraries.758864454" superClass="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.libraries" value="com.freescale.s32ds.cross.gnu.e200.tool.cpp.linker.option.target.libraries.ewl_c9x_c" valueType="enumerated"/>
 							</tool>
 							<tool id="com.freescale.s32ds.cross.gnu.e200.tool.archiver.355728474" name="Standard S32DS Archiver" superClass="com.freescale.s32ds.cross.gnu.e200.tool.archiver"/>
@@ -103,12 +102,12 @@
 									<listOptionValue builtIn="false" value="MPC574xP"/>
 								</option>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.family.827726621" name="Target Processor" superClass="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.family" value="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.family.e200z4" valueType="enumerated"/>
-								<option id="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.sysroot.1116693773" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.sysroot" value="--sysroot=&quot;${eclipse_home}../S32DS/e200_ewl2&quot;" valueType="string"/>
+								<option id="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.sysroot.1116693773" name="Sysroot" superClass="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.sysroot" useByScannerDiscovery="false" value="--sysroot=&quot;${VLE_EWL_DIR}&quot;" valueType="string"/>
 								<option id="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.libraries.157169830" superClass="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.libraries" value="com.freescale.s32ds.cross.gnu.e200.tool.assembler.option.target.libraries.ewl_c9x_c" valueType="enumerated"/>
-								<option id="gnu.both.asm.option.include.paths.750101581" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
+								<option id="gnu.both.asm.option.include.paths.750101581" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;../include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${eclipse_home}../S32DS/e200_ewl2/EWL_C/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${eclipse_home}../S32DS/e200_ewl2/EWL_C/include/pa&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${eclipse_home}../S32DS/build_tools/e200_ewl2/EWL_C/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${eclipse_home}../S32DS/build_tools/e200_ewl2/EWL_C/include/pa&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1217613491" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="com.freescale.s32ds.cross.gnu.tool.assembler.inputType.asmfile.872957975" superClass="com.freescale.s32ds.cross.gnu.tool.assembler.inputType.asmfile"/>
@@ -147,9 +146,7 @@
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.MwErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="com.freescale.s32ds.cdt.core.errorParsers.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.MPWErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.MwfeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -158,8 +155,9 @@
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.LnkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.CobjErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.s32ds.cdt.core.errorParsers.S32DSGNULinkerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -287,9 +285,7 @@
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
-					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.MwErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="com.freescale.s32ds.cdt.core.errorParsers.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.MPWErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.MwfeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
@@ -298,8 +294,9 @@
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.LnkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.CobjErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="com.freescale.s32ds.cdt.core.errorParsers.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.freescale.s32ds.cdt.core.errorParsers.S32DSGNULinkerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -435,4 +432,5 @@
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.embsys" parent_project="true" register_architecture="e200" register_board="---  none ---" register_chip="MPC5744P" register_vendor="Freescale"/>
 	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
